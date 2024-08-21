@@ -5,9 +5,10 @@ import { useParams } from "react-router-dom";
 
 function UserProfile() {
     const [user, setUser] = useState({});
-    const params = useParams();
+  const params = useParams();
+  console.log(params)
     const userId = params.id;
-    
+
     useEffect(() =>{
       fetch(`http://localhost:4000/users/${userId}`)
       .then(r => r.json())
